@@ -1,4 +1,4 @@
-# accessibility-testing
+# Accessibility Testing
 This repository houses a sample website that can be utilized for WAVE and AXE accessibility testing.
 
 # List of Intentional Accessibility Errors
