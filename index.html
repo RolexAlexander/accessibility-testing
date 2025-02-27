@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Stunning Accessibility Demo</title>
+  <!-- Note: The <html> tag intentionally omits a language attribute -->
+  <style>
+    /* General Styles */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #ffffff;
+      color: #666; /* Low contrast text */
+      line-height: 1.6;
+    }
+    header {
+      background: url('https://via.placeholder.com/1200x300.png?text=Header+Background') no-repeat center center;
+      background-size: cover;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-shadow: 1px 1px 2px #000;
+    }
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+    }
+    nav {
+      background-color: #333;
+      padding: 10px 20px;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    nav ul li {
+      margin-right: 20px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+    /* Intentionally low contrast for demonstration */
+    .marquee {
+      background-color: #333;
+      color: #333; /* Very low contrast on dark background */
+      padding: 10px;
+      text-align: center;
+      margin: 20px 0;
+    }
+    .content {
+      padding: 20px;
+    }
+    .content h2, .content h3, .content h4, .content h5 {
+      margin-top: 1.2em;
+    }
+    .content img {
+      max-width: 100%;
+      height: auto;
+      margin: 20px 0;
+    }
+    form {
+      margin: 20px 0;
+    }
+    form div {
+      margin-bottom: 10px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+    }
+    button {
+      padding: 10px 15px;
+      background-color: #005a9c;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #004477;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    table, th, td {
+      border: 1px solid #aaa;
+    }
+    th, td {
+      padding: 8px;
+      text-align: left;
+    }
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Our Stunning Demo Site</h1>
+  </header>
+  
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a>Services</a></li> <!-- Error: Missing href attribute -->
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  
+  <div class="marquee">
+    <!-- Deprecated element usage -->
+    <marquee behavior="scroll" direction="left">Breaking News: Our website is intentionally flawed for testing purposes!</marquee>
+  </div>
+  
+  <div class="content">
+    <h2>Our Mission</h2>
+    <p>This website is designed to demonstrate a visually appealing layout combined with a range of accessibility issues for testing. Explore the page using accessibility tools like Axe and WAVE to discover the deliberate errors.</p>
+    
+    <img src="https://via.placeholder.com/800x400.png?text=Beautiful+Image"> <!-- Error: Missing alt attribute -->
+    
+    <h3>Features</h3>
+    <ul>
+      <li>Modern design</li>
+      <li>Responsive layout</li>
+      <li>Intentional Accessibility Errors</li>
+    </ul>
+    
+    <h2>Contact Us</h2>
+    <form>
+      <div>
+        <input type="text" name="name" placeholder="Name"> <!-- Error: No label -->
+      </div>
+      <div>
+        <input type="email" name="email" placeholder="Email"> <!-- Error: No label -->
+      </div>
+      <div>
+        <textarea name="message" placeholder="Your Message"></textarea> <!-- Error: No label -->
+      </div>
+      <button type="submit">Send Message</button>
+    </form>
+    
+    <h2>Data Table</h2>
+    <table>
+      <tr>
+        <th>Item</th>
+        <th>Quantity</th>
+      </tr>
+      <tr>
+        <td>Apples</td>
+        <td>10</td>
+      </tr>
+      <tr>
+        <td>Oranges</td>
+        <td>5</td>
+      </tr>
+    </table>
+    
+    <h3>Improper Heading Structure</h3>
+    <p>The following section intentionally uses out-of-order headings.</p>
+    <h4>Subsection 1</h4>
+    <h2>Subsection 2</h2> <!-- Error: Heading level jumps from h4 to h2 -->
+    <h5>Subsection 3</h5>
+    
+    <h2>Non-Descriptive Link</h2>
+    <p>For more details, click <a href="#">here</a>.</p> <!-- Error: Link text is not descriptive -->
+  </div>
+  
+  <footer>
+    <p>&copy; 2025 Accessibility Demo. All rights reserved.</p>
+  </footer>
+</body>
+</html>
